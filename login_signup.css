@@ -1,73 +1,90 @@
+/* Overall body layout */
 body {
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    background-color: #ffffff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to right, #fdfbfb, #ebedee); /* soft background gradient */
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
+    min-height: 100vh; /* full screen height */
     margin: 0;
 }
 
+/* Login/Sign-up box styling */
 .form-container {
-    background-color: gold;
-    border-radius: 12px;
-    padding: 30px 20px;
+    background-color: #ffffff;
+    border-radius: 16px;
+    padding: 40px 25px;
     width: 90%;
     max-width: 400px;
     text-align: center;
     color: #000;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2); /* soft shadow */
 }
 
+/* Form heading */
 h3 {
     margin-bottom: 20px;
     font-size: 24px;
     color: #333;
 }
 
+/* Input fields */
 form input {
     width: 100%;
-    padding: 10px 12px;
+    padding: 12px 15px;
     margin: 10px 0;
-    border: none;
+    border: 1px solid #ccc;
     border-radius: 6px;
     font-size: 16px;
     box-sizing: border-box;
+    transition: all 0.3s ease;
 }
 
+/* Input focus style */
 form input:focus {
     outline: none;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    border-color: #007BFF;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
 }
 
+/* Submit button style */
 button {
     width: 100%;
-    padding: 10px;
+    padding: 12px;
     margin-top: 15px;
     border: none;
     border-radius: 6px;
-    background-color: #333;
+    background-color: #007BFF; /* primary color */
     color: white;
     font-size: 16px;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
 
+/* Button hover effect */
 button:hover {
-    background-color: #555;
+    background-color: #0056b3;
 }
 
+/* Paragraph (sign-up/login text) */
 p {
     margin-top: 15px;
     font-size: 14px;
 }
 
+/* Link styling */
 a {
-    color: #000;
+    color: #007BFF;
     text-decoration: none;
     font-weight: bold;
 }
 
+/* Link hover effect */
 a:hover {
     text-decoration: underline;
 }
+
+
+
+
+

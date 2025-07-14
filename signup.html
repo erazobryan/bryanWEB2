@@ -1,19 +1,38 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
     <title>Sign-Up Page</title>
+    <!-- Link to shared external CSS -->
     <link rel="stylesheet" href="login_signup.css">
 </head>
 <body>
     <div class="form-container">
         <h3>Sign-Up</h3>
+
+        <!-- Sign-up form -->
         <form>
-            <input type="text" placeholder="Username"><br><br>
-            <input type="text" placeholder="Email or Number"><br><br>
-            <input type="password" placeholder="Password"><br><br>
-            <input type="password" placeholder="Confirm Password"><br><br>
+            <!-- Username input field -->
+            
+            <input type="text" id="signup-username" placeholder="Username" required>
+
+            <!-- Email or Number field -->
+            
+            <input type="text" id="signup-email" placeholder="Email or Number" required>
+
+            <!-- Password field -->
+            
+            <input type="password" id="signup-password" placeholder="Password" required>
+
+            <!-- Confirm password field -->
+            
+            <input type="password" id="confirm-password" placeholder="Confirm Password" required>
+
+            <!-- Sign-up button -->
             <button type="submit">Sign-Up</button>
         </form>
+
+        <!-- Link to login page -->
         <p>Already have an account? <a href="login.html">Login</a></p>
     </div>
 </body>

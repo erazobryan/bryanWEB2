@@ -1,17 +1,30 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
     <title>Login Page</title>
+    <!-- Link to external CSS file -->
     <link rel="stylesheet" href="login_signup.css">
 </head>
 <body>
     <div class="form-container">
         <h3>Login</h3>
+
+        <!-- Login form -->
         <form>
-            <input type="text" placeholder="Email or Number"><br><br>
-            <input type="password" placeholder="Password"><br><br>
+            <!-- Email or Number field with required validation -->
+          
+            <input type="text" id="login-email" placeholder="Email or Number" required>
+
+            <!-- Password field with required validation -->
+            
+            <input type="password" id="login-password"  placeholder="Password" required>
+
+            <!-- Submit login button -->
             <button type="submit">Login</button>
         </form>
+
+        <!-- Link to sign-up page -->
         <p>Don't have an account yet? <a href="signup.html">Sign-up</a></p>
     </div>
 </body>
