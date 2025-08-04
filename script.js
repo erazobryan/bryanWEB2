@@ -1,38 +1,24 @@
-
-const students = [
-  { name: "Anna", grade: 92 },
-  { name: "Ben", grade: 78 },
-  { name: "Clara", grade: 88 },
-  { name: "David", grade: 84 },
-  { name: "Ella" } // default grade 0
-];
-
-function displayStudent({ name, grade = 0 }) {
-  return `Student: ${name}, Grade: ${grade}`;
+// 1. Function Factory for Multiplier
+function makeMultiplier(factor) {
+  return function(number) {
+    return number * factor;
+  };
 }
 
-// Helper to add list items
-function addToList(id, items) {
-  const ul = document.getElementById(id);
-  items.forEach(text => {
-    const li = document.createElement("li");
-    li.textContent = text;
-    ul.appendChild(li);
-  });
+const double = makeMultiplier(2);
+console.log(double(5)); // 10
+
+// 2. Function Factory for Greeter
+function makeGreeter(greeting) {
+  return function(name) {
+    return `${greeting}, ${name}!`;
+  };
 }
 
-// Uppercase names
-addToList("uppercase-names", students.map(s => s.name.toUpperCase()));
+const sayHi = makeGreeter("Hi");
+console.log(sayHi("Mia")); // "Hi, Mia!"
 
-// Top students (grade ≥ 85)
-addToList("top-students", students
-  .filter(({ grade = 0 }) => grade >= 85)
-  .map(({ name, grade }) => `${name} - ${grade}`)
-);
+// Displaying results in the HTML
+document.getElementById("output1").textContent = `double(5): ${double(5)}`;
+document.getElementById("output2").textContent = `sayHi("Mia"): ${sayHi("Mia")}`;
 
-// Average grade
-const avg = students.reduce((sum, { grade = 0 }) => sum + grade, 0) / students.length;
-document.getElementById("average-grade").textContent = avg.toFixed(2);
-
-// All students using displayStudent
-addToList("all-students", students.map(displayStudent));
