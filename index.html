@@ -1,143 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Client Information Form</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <title>Student Grades Dashboard</title>
 </head>
 <body>
-  <div class="container">
-    <header class="form-header">
-      <h1 class="form-title">Client Information Form</h1>
-      <p class="form-subtitle">Please fill out the form below to provide your project details.</p>
-    </header>
+  <h1>Student Grades Dashboard</h1>
 
-    <form>
-      <fieldset class="form-section">
-        <legend class="section-title">Personal Information</legend>
-        <div class="form-group">
-          <label>First Name</label>
-          <input type="text" placeholder="Enter First Name" required>
-        </div>
-        <div class="form-group">
-          <label>Last Name</label>
-          <input type="text" placeholder="Enter Last Name" required>
-        </div>
-        <div class="form-group">
-          <label>Middle Name</label>
-          <input type="text" placeholder="Enter Middle Name" required>
-        </div>
-        <div class="form-group">
-          <label>Email Address</label>
-          <input type="email" placeholder="john.doe@example.com" required>
-        </div>
-        <div class="form-group">
-          <label>Phone Number</label>
-          <input type="tel" placeholder="(123) 456-7890">
-        </div>
-        <div class="form-group">
-          <label>Company/Organization (Optional)</label>
-          <input type="text" placeholder="Acme Corp">
-        </div>
-      </fieldset>
+  <h2>Uppercase Student Names</h2>
+  <ul id="uppercase-names"></ul>
 
-      <fieldset class="form-section">
-        <legend class="section-title">Project Details</legend>
-        <div class="form-group">
-          <label>Project Name</label>
-          <input type="text" placeholder="Website Redesign" required>
-        </div>
-        <div class="form-group">
-          <label>Project Type</label>
-          <select required>
-            <option value="">Select a project type</option>
-            <option>Website Development</option>
-            <option>Mobile Application</option>
-            <option>Branding & Identity</option>
-            <option>Digital Marketing</option>
-            <option>Other</option>
-          </select>
-        </div>
-        <div class="form-group">
-          <label>Estimated Budget</label>
-          <input type="text" placeholder="e.g., ₱15000">
-          <small class="help-text">Estimated budget in PHP.</small>
-        </div>
-        <div class="form-group">
-          <label>Desired Deadline (Optional)</label>
-          <input type="date">
-        </div>
-        <div class="form-group">
-          <label>Project Description</label>
-          <textarea rows="5" placeholder="Describe goals, audience, and features."></textarea>
-        </div>
-      </fieldset>
+  <h2>Top Students (Grade ≥ 85)</h2>
+  <ul id="top-students"></ul>
 
-      <fieldset class="form-section">
-        <legend class="section-title">File & Content Provision</legend>
-        <div class="form-group">
-          <label>Will your company provide content?</label>
-          <select required>
-            <option>Yes</option>
-            <option>No</option>
-            <option>Partial</option>
-          </select>
-        </div>
-        <div class="form-group">
-          <label>Upload Relevant Files (Optional)</label>
-          <input type="file" multiple accept=".pdf,.doc,.docx,.zip,.jpg,.png">
-          <small class="help-text">Max 10MB. e.g., logos, docs, images.</small>
-        </div>
-      </fieldset>
+  <h2>Average Grade</h2>
+  <p id="average-grade"></p>
 
-      <fieldset class="form-section">
-        <legend class="section-title">Approvals & Follow-ups</legend>
-        <div class="form-group">
-          <label>Update Frequency</label>
-          <select required>
-            <option>Daily</option>
-            <option>Weekly</option>
-            <option>Monthly</option>
-            <option>Every Key Meeting</option>
-          </select>
-        </div>
-        <div class="form-group">
-          <label>Preferred Contact Method</label>
-          <select required>
-            <option value="">Select a method</option>
-            <option>Email</option>
-            <option>Phone Call</option>
-            <option>Video Conference</option>
-          </select>
-        </div>
-        <div class="form-group checkbox-group">
-          <input type="checkbox" required>
-          <label>I agree to the <a href="#" class="link">Terms and Conditions</a></label>
-        </div>
-      </fieldset>
+  <h2>All Students</h2>
+  <ul id="all-students"></ul>
 
-      <fieldset class="form-section">
-        <legend class="section-title">Signature</legend>
-        <div class="form-group">
-          <label>Digital Signature</label>
-          <input type="text" placeholder="Type full name as signature">
-          <small class="help-text">Typing your name confirms accuracy.</small>
-        </div>
-      </fieldset>
-
-      <button type="submit" class="submit-button">Submit Information</button>
-    </form>
-  </div>
-
-  <div class="confirmation-message">
-    <div class="message-content">
-      <h2>Thank You!</h2>
-      <p>Your information was submitted successfully.</p>
-      <p>We will contact you shortly.</p>
-      <button class="close-button">Close</button>
-    </div>
-  </div>
+  <!-- Link to external JavaScript file -->
+  <script src="script.js"></script>
 </body>
 </html>
